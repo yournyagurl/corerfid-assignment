@@ -1,4 +1,5 @@
 In terminal-
 
-cd inspection-dashboard
+cd inspection-dashboard 
+then
 npx serve
