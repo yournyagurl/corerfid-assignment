@@ -1,0 +1,30 @@
+[
+  {
+    "serial_number": "100325",
+    "date": "2025-04-29",
+    "inspector": "Bard Smith",
+    "status": "Pass",
+    "notes": "No defects"
+  },
+  {
+    "serial_number": "100326",
+    "date": "2025-04-27",
+    "inspector": "Ozgur Uregen",
+    "status": "Fail",
+    "notes": "Crack on lifting point"
+  },
+  {
+    "serial_number": "100327",
+    "date": "2025-04-25",
+    "inspector": "Emily Davis",
+    "status": "Pass",
+    "notes": "Lubricated and re-certified"
+  },
+  {
+    "serial_number": "100328",
+    "date": "2025-04-20",
+    "inspector": "John Walker",
+    "status": "Fail",
+    "notes": "Broken latch"
+  }
+]

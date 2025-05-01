@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inspection Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-6xl mx-auto px-4 py-6">
+    <div class="flex items-center justify-center mb-6">
+      <img src="corerfid-logo.png" alt="CoreRFID Logo" class="h-12 mr-4" />
+      <h1 class="text-3xl font-bold">Inspection Dashboard</h1>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+      <input type="text" id="searchInput" placeholder="Search by Serial Number" class="w-full md:w-1/3 px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <select id="statusFilter" class="w-full md:w-1/4 px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <option value="All">All Statuses</option>
+        <option value="Pass">Pass</option>
+        <option value="Fail">Fail</option>
+      </select>
+      <button id="sortButton" class="w-full md:w-1/4 px-3 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 transition">Sort by Date ↓</button>
+    </div>
+
+    <div id="inspectionTableContainer" class="overflow-x-auto bg-white rounded-xl shadow-md p-4">
+      <!-- Table will be rendered here -->
+    </div>
+
+     <!-- Modal for Detailed Inspection View -->
+     <div id="inspectionModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+      <div class="bg-white p-6 rounded-lg w-96">
+        <h2 class="text-xl font-semibold mb-4" id="modalTitle">Inspection Details</h2>
+        <p><strong>Serial Number:</strong> <span id="modalSerialNumber"></span></p>
+        <p><strong>Inspection Date:</strong> <span id="modalDate"></span></p>
+        <p><strong>Inspector:</strong> <span id="modalInspector"></span></p>
+        <p><strong>Status:</strong> <span id="modalStatus"></span></p>
+        <p><strong>Notes:</strong> <span id="modalNotes"></span></p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
